@@ -1,0 +1,20 @@
+{
+  "product": "ProofReceipt",
+  "version": 1,
+  "id": "PR-20261102-RU5W9G",
+  "seller": "EscrowScout (Telegraph Season II, Apps & Agents)",
+  "client": "0x71C7656EC7ab88b098defB751B7401B5f6d8976F",
+  "job": "Counterparty evaluation before a 150 USDC agent-to-agent payment",
+  "amount": "0.024",
+  "currency": "USDC",
+  "wallet": "0x48E78fFC3f02A65c6A9718b4dc293ae14cBb7985",
+  "created": "2026-11-02T11:13:14.808793Z",
+  "deliverable": {
+    "type": "file",
+    "name": "escrowscout-evaluation.json",
+    "bytes": 2639,
+    "sha256": "2c251155dc36bed4b79de5e82168dc1d7827881e77a8e93a2a06ef18b015299e"
+  },
+  "receipt_hash": "98514586451ac3bf08b57b7f49e1da7c180613036933c3b2855699f8b753e44a",
+  "verify_at": "Open ProofReceipt \u2192 Verify, paste this JSON and provide the deliverable exactly as received."
+}

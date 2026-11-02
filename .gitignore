@@ -1,0 +1,21 @@
+# Secrets — NEVER commit
+.env
+.env.*
+*.key
+*keystore*
+*.pem
+
+# Python
+__pycache__/
+*.pyc
+
+# Node
+node_modules/
+
+# Foundry build artifacts
+contracts/out/
+contracts/cache/
+broadcast/
+
+# OS
+.DS_Store

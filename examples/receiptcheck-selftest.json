@@ -1,0 +1,30 @@
+[
+  {
+    "case": "genuine receipt + genuine deliverable",
+    "expected": "MATCH",
+    "got": "MATCH",
+    "bundle_signature_valid": true,
+    "latency_ms": 9.57
+  },
+  {
+    "case": "genuine receipt + tampered deliverable",
+    "expected": "MISMATCH",
+    "got": "MISMATCH",
+    "bundle_signature_valid": true,
+    "latency_ms": 9.43
+  },
+  {
+    "case": "amount altered after sealing",
+    "expected": "MISMATCH",
+    "got": "MISMATCH",
+    "bundle_signature_valid": true,
+    "latency_ms": 9.39
+  },
+  {
+    "case": "not a receipt at all",
+    "expected": "INVALID",
+    "got": "INVALID",
+    "bundle_signature_valid": true,
+    "latency_ms": 9.39
+  }
+]

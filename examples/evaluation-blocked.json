@@ -1,0 +1,80 @@
+{
+  "decision": {
+    "deductions": [
+      {
+        "points": 25,
+        "reason": "counterparty interacted with a mixer"
+      },
+      {
+        "points": 25,
+        "reason": "high audit finding: Unverified source for deployed bytecode"
+      }
+    ],
+    "hard_stops": [
+      "sanctions screening match on OFAC-SDN"
+    ],
+    "score": 50,
+    "verdict": "DO_NOT_PAY"
+  },
+  "escrow_inspection": null,
+  "evaluated_at": "2026-11-02T11:13:14.811137Z",
+  "network": "Telegraph testnet (Base Sepolia)",
+  "purchases": [
+    {
+      "answer": {
+        "confidence": 0.99,
+        "lists_checked": [
+          "OFAC-SDN"
+        ],
+        "match": true,
+        "matched_list": "OFAC-SDN"
+      },
+      "intent": "SANCTIONS_SCREENING_MATCH",
+      "miner_id": "m-6bc",
+      "miner_rank": 1,
+      "price_usdc": "0.008",
+      "protocol_receipt": "tg-fixture-d22bc4c5379a0cf8"
+    },
+    {
+      "answer": {
+        "first_seen": "2026-04-05",
+        "flags": [
+          "mixer_interaction"
+        ],
+        "tx_count": 57,
+        "wallet_age_days": 210
+      },
+      "intent": "ONCHAIN_METRIC_VERIFY",
+      "miner_id": "m-bdd",
+      "miner_rank": 1,
+      "price_usdc": "0.006",
+      "protocol_receipt": "tg-fixture-3f0b94538dba52b1"
+    },
+    {
+      "answer": {
+        "findings": [
+          {
+            "severity": "high",
+            "title": "Unverified source for deployed bytecode"
+          }
+        ],
+        "verdict": "warnings"
+      },
+      "intent": "SMART_CONTRACT_AUDIT",
+      "miner_id": "m-a51",
+      "miner_rank": 1,
+      "price_usdc": "0.010",
+      "protocol_receipt": "tg-fixture-af46dcc735fb3862"
+    }
+  ],
+  "subject": {
+    "counterparty_wallet": "0xbadc0ffee0ddf00d00000000000000000000dead",
+    "currency": "USDC",
+    "escrow_contract": null,
+    "proposed_amount": "150"
+  },
+  "tool": "EscrowScout",
+  "total_intelligence_cost_usdc": "0.024",
+  "transport_mode": "fixture",
+  "version": 1
+}

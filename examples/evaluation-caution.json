@@ -1,0 +1,87 @@
+{
+  "decision": {
+    "deductions": [
+      {
+        "points": 20,
+        "reason": "counterparty wallet is 20 days old (< 30)"
+      },
+      {
+        "points": 15,
+        "reason": "medium audit finding: Owner can pause transfers"
+      },
+      {
+        "points": 5,
+        "reason": "low audit finding: No timelock on admin functions"
+      }
+    ],
+    "hard_stops": [],
+    "score": 60,
+    "verdict": "PROCEED_WITH_CAUTION"
+  },
+  "escrow_inspection": null,
+  "evaluated_at": "2026-11-02T11:13:14.809957Z",
+  "network": "Telegraph testnet (Base Sepolia)",
+  "purchases": [
+    {
+      "answer": {
+        "confidence": 0.97,
+        "lists_checked": [
+          "OFAC-SDN",
+          "EU-consolidated",
+          "UN-SC"
+        ],
+        "match": false
+      },
+      "intent": "SANCTIONS_SCREENING_MATCH",
+      "miner_id": "m-6bc",
+      "miner_rank": 1,
+      "price_usdc": "0.008",
+      "protocol_receipt": "tg-fixture-03de050e569296b9"
+    },
+    {
+      "answer": {
+        "first_seen": "2026-10-13",
+        "flags": [
+          "new_wallet"
+        ],
+        "tx_count": 12,
+        "wallet_age_days": 20
+      },
+      "intent": "ONCHAIN_METRIC_VERIFY",
+      "miner_id": "m-bdd",
+      "miner_rank": 1,
+      "price_usdc": "0.006",
+      "protocol_receipt": "tg-fixture-e8afe049443f5ca2"
+    },
+    {
+      "answer": {
+        "findings": [
+          {
+            "severity": "medium",
+            "title": "Owner can pause transfers"
+          },
+          {
+            "severity": "low",
+            "title": "No timelock on admin functions"
+          }
+        ],
+        "verdict": "warnings"
+      },
+      "intent": "SMART_CONTRACT_AUDIT",
+      "miner_id": "m-a51",
+      "miner_rank": 1,
+      "price_usdc": "0.010",
+      "protocol_receipt": "tg-fixture-e61aaf04543768b6"
+    }
+  ],
+  "subject": {
+    "counterparty_wallet": "0xde0B295669a9FD93d5F28D9A85E40f4cb697BAe",
+    "currency": "USDC",
+    "escrow_contract": null,
+    "proposed_amount": "150"
+  },
+  "tool": "EscrowScout",
+  "total_intelligence_cost_usdc": "0.024",
+  "transport_mode": "fixture",
+  "version": 1
+}

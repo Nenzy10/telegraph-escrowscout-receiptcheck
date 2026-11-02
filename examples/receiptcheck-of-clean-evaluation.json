@@ -1,0 +1,18 @@
+{
+  "intent": "RECEIPT_INTEGRITY_VERIFY",
+  "provider": "ReceiptCheck by NenzyBrown",
+  "provider_address": "0x8cC35ca78b0937236D69a2F2C0D5aF2a9a8a0B3e",
+  "served_at": "2026-11-02T11:13:14.812642Z",
+  "receipt_id": "PR-20261102-RU5W9G",
+  "checks": {
+    "deliverable_match": true,
+    "fields_match": true,
+    "deliverable_sha256_claimed": "2c251155dc36bed4b79de5e82168dc1d7827881e77a8e93a2a06ef18b015299e",
+    "deliverable_sha256_recomputed": "2c251155dc36bed4b79de5e82168dc1d7827881e77a8e93a2a06ef18b015299e",
+    "receipt_hash_claimed": "98514586451ac3bf08b57b7f49e1da7c180613036933c3b2855699f8b753e44a",
+    "receipt_hash_recomputed": "98514586451ac3bf08b57b7f49e1da7c180613036933c3b2855699f8b753e44a"
+  },
+  "verdict": "MATCH",
+  "bundle_hash": "de1557560a9bf672d153d4201777853a0142e485600269f4bdf1e41e9576a912",
+  "signature": "bc73ec07718af4bea823c1697e09bd826e455960fce15926d8f018838c10db5b54f4445e8a8c8c4570d73378d6584ebdf5e9023371e23bcd4f5ba68b0f781e5c1c"
+}

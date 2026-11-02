@@ -1,0 +1,100 @@
+{
+  "decision": {
+    "deductions": [],
+    "hard_stops": [],
+    "score": 100,
+    "verdict": "PROCEED"
+  },
+  "escrow_inspection": {
+    "address": "0x6c4EE22087B8c971027cB61fD35e8EB6bD84CFDB",
+    "balance_wei": 1000000000000000,
+    "block_number": 53480625,
+    "chain_id": 84532,
+    "code_hash": "ce3af16f2c6b038079023b432eb8665965ca65eb36182246891849f54154b112",
+    "code_size_bytes": 2958,
+    "escrow": {
+      "arbiter": "0x48E78fFC3f02A65c6A9718b4dc293ae14cBb7985",
+      "buyer": "0x7c416C5Cb830BC89edD9EC445fba0DB3Ce8e31FE",
+      "deadline_unix": 1794222707,
+      "refunded": false,
+      "released": false,
+      "seller": "0x8cC35ca78b0937236D69a2F2C0D5aF2a9a8a0B3e"
+    },
+    "functions_present": [
+      "release()",
+      "refundAfterDeadline()",
+      "arbiter()",
+      "buyer()",
+      "seller()",
+      "deadline()"
+    ],
+    "is_contract": true,
+    "opcode_hints": {
+      "delegatecall": true,
+      "selfdestruct": true
+    },
+    "proxy": {
+      "admin": null,
+      "beacon": null,
+      "implementation": null,
+      "is_proxy": false
+    },
+    "signals": [
+      "release authorised for buyer or arbiter (not the seller alone); buyer refund opens after the deadline"
+    ]
+  },
+  "evaluated_at": "2026-11-02T11:13:14.808793Z",
+  "network": "Telegraph testnet (Base Sepolia)",
+  "purchases": [
+    {
+      "answer": {
+        "confidence": 0.99,
+        "lists_checked": [
+          "OFAC-SDN",
+          "EU-consolidated",
+          "UN-SC"
+        ],
+        "match": false
+      },
+      "intent": "SANCTIONS_SCREENING_MATCH",
+      "miner_id": "m-6bc",
+      "miner_rank": 1,
+      "price_usdc": "0.008",
+      "protocol_receipt": "tg-fixture-18b6d054c12730b4"
+    },
+    {
+      "answer": {
+        "first_seen": "2024-04-11",
+        "flags": [],
+        "tx_count": 1284,
+        "wallet_age_days": 940
+      },
+      "intent": "ONCHAIN_METRIC_VERIFY",
+      "miner_id": "m-bdd",
+      "miner_rank": 1,
+      "price_usdc": "0.006",
+      "protocol_receipt": "tg-fixture-234be5aec35f938c"
+    },
+    {
+      "answer": {
+        "findings": [],
+        "verdict": "clean"
+      },
+      "intent": "SMART_CONTRACT_AUDIT",
+      "miner_id": "m-a51",
+      "miner_rank": 1,
+      "price_usdc": "0.010",
+      "protocol_receipt": "tg-fixture-67cd14eb06446f2a"
+    }
+  ],
+  "subject": {
+    "counterparty_wallet": "0x71C7656EC7ab88b098defB751B7401B5f6d8976F",
+    "currency": "USDC",
+    "escrow_contract": "0x6c4EE22087B8c971027cB61fD35e8EB6bD84CFDB",
+    "proposed_amount": "150"
+  },
+  "tool": "EscrowScout",
+  "total_intelligence_cost_usdc": "0.024",
+  "transport_mode": "fixture",
+  "version": 1
+}

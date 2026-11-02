@@ -1,0 +1,24 @@
+== ReceiptCheck provider (Miners track) ==
+health: ok · intent RECEIPT_INTEGRITY_VERIFY · provider 0x8cC35ca78b0937236D69a2F2C0D5aF2a9a8a0B3e
+
+== EscrowScout: clean counterparty 0x71C7656EC7ab88b098defB751B7401B5f6d8976F ==
+purchases: SANCTIONS_SCREENING_MATCH via m-6bc (rank 1) 0.008 USDC, receipt tg-fixture-18b6d054c12730b4; ONCHAIN_METRIC_VERIFY via m-bdd (rank 1) 0.006 USDC, receipt tg-fixture-234be5aec35f938c; SMART_CONTRACT_AUDIT via m-a51 (rank 1) 0.010 USDC, receipt tg-fixture-67cd14eb06446f2a
+escrow inspection (live, Base Sepolia): release authorised for buyer or arbiter (not the seller alone); buyer refund opens after the deadline
+VERDICT: PROCEED (score 100/100)
+evaluation receipt: PR-20261102-RU5W9G · sha256 98514586451ac3bf08b57b7f49e1da7c180613036933c3b2855699f8b753e44a
+
+== EscrowScout: caution counterparty 0xde0B295669a9FD93d5F28D9A85E40f4cb697BAe ==
+purchases: SANCTIONS_SCREENING_MATCH via m-6bc (rank 1) 0.008 USDC, receipt tg-fixture-03de050e569296b9; ONCHAIN_METRIC_VERIFY via m-bdd (rank 1) 0.006 USDC, receipt tg-fixture-e8afe049443f5ca2; SMART_CONTRACT_AUDIT via m-a51 (rank 1) 0.010 USDC, receipt tg-fixture-e61aaf04543768b6
+VERDICT: PROCEED_WITH_CAUTION (score 60/100)
+evaluation receipt: PR-20261102-C2OHOB · sha256 3b4eb388ba127e572206c5df2963e5ef92efec3e2bd1628d75b42cece52ea0cd
+
+== EscrowScout: blocked counterparty 0xbadc0ffee0ddf00d00000000000000000000dead ==
+purchases: SANCTIONS_SCREENING_MATCH via m-6bc (rank 1) 0.008 USDC, receipt tg-fixture-d22bc4c5379a0cf8; ONCHAIN_METRIC_VERIFY via m-bdd (rank 1) 0.006 USDC, receipt tg-fixture-3f0b94538dba52b1; SMART_CONTRACT_AUDIT via m-a51 (rank 1) 0.010 USDC, receipt tg-fixture-af46dcc735fb3862
+VERDICT: DO_NOT_PAY (score 50/100) · hard stops: sanctions screening match on OFAC-SDN
+evaluation receipt: PR-20261102-ACQ195 · sha256 88c4618bc8be7927b80df2debdb2ccdd8d852e21655f3e2bec20d654f18bd6d0
+
+== ReceiptCheck verifies EscrowScout's own evaluation receipt ==
+genuine evaluation report -> MATCH (bundle signature valid: True)
+tampered evaluation report -> MISMATCH (deliverable_match: False)
+
+Demo complete. Files in examples/: 3 evaluations, 3 receipts, 1 verification bundle.

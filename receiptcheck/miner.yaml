@@ -1,0 +1,30 @@
+# ReceiptCheck — Telegraph Miner/Provider registration config.
+#
+# Telegraph's documented plug-in model: any API joins as a miner with one
+# config file (standard YAML configuration + API endpoint) and registered
+# Intents. This file is that config for ReceiptCheck. Serving the endpoint is
+# done (receiptcheck/server.py); the remaining registration step is pointing
+# the Telegraph node software at this config with the provider wallet below —
+# see INTEGRATION_NOTES.md for the exact status.
+miner:
+  name: ReceiptCheck
+  provider: NenzyBrown
+  wallet: "0x8cC35ca78b0937236D69a2F2C0D5aF2a9a8a0B3e"
+  endpoint: "http://127.0.0.1:8791/v1/receipt-check"
+  health: "http://127.0.0.1:8791/health"
+  intents:
+    - id: RECEIPT_INTEGRITY_VERIFY
+      description: >-
+        Given a ProofReceipt-format delivery receipt and the delivered bytes,
+        recompute the canonical SHA-256 and return MATCH / MISMATCH / INVALID
+        with a signed evidence bundle (deliverable hash check + receipt-field
+        re-hash check).
+      price_usdc: "0.01"
+      request_shape:
+        receipt: "ProofReceipt receipt JSON"
+        deliverable_content: "{kind: text|file_b64, text|data}"
+      answer_shape:
+        verdict: "MATCH | MISMATCH | INVALID"
+        checks: "object"
+        bundle_hash: "sha256 hex"
+        signature: "EIP-191 signature by the provider wallet"
